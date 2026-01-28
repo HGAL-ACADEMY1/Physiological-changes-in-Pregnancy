@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physiological Changes in Pregnancy - HGAL Academy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- RESET & BASE STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212; /* Deep charcoal/black */
+            background-image: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+            color: #E0E0E0; /* High contrast off-white */
+            font-family: 'Merriweather', serif;
+            font-size: 26px; /* Requested size */
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- SCROLL PROGRESS BAR --- */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            width: 0%;
+            border-radius: 0 4px 4px 0;
+            transition: width 0.1s ease-out;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 800px; /* Optimal reading width for large text */
+            margin: 0 auto;
+            padding: 40px 20px 100px 20px;
+        }
+
+        /* --- LOGO --- */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .logo-img {
+            max-width: 80%; /* Responsive but large */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+        }
+
+        /* --- TYPOGRAPHY & ELEMENTS --- */
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: 900;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h1 { font-size: 1.8em; text-align: center; color: #64b5f6; } /* Light Blue Accent */
+        h2 { font-size: 1.4em; color: #81c784; } /* Soft Green Accent */
+        
+        p {
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #dedede;
+        }
+
+        strong {
+            color: #ffb74d; /* Soft Orange for emphasis */
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none; /* Removing default bullets for custom feel */
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        li {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 0;
+        }
+
+        /* --- ANIMATIONS --- */
+        /* The "Pop" effect on scroll */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal-text.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse-btn {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(33, 150, 243, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(33, 150, 243, 0); }
+        }
+
+        /* --- VIP SECTION --- */
+        .vip-container {
+            margin-top: 80px;
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px dashed #333;
+        }
+
+        .vip-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            color: white;
+            text-decoration: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            animation: pulse-btn 2s infinite;
+            transition: background 0.3s;
+        }
+
+        .vip-btn:hover {
+            background: linear-gradient(45deg, #1976D2, #00BCD4);
+        }
+
+        /* --- MOBILE ADJUSTMENTS --- */
+        @media (max-width: 600px) {
+            body { font-size: 20px; } /* Slightly smaller on very small screens, but still big */
+            .container { padding: 20px 15px; }
+            h1 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div class="container">
+        
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <img src="https://i.imgur.com/eP0BFrd.png" alt="HGAL Academy Logo" class="logo-img">
+        </div>
+
+        <!-- Start of Lecture Content -->
+
+        <h1 class="reveal-text">Anatomy and Physiology of Pregnancy 🤰</h1>
+
+        <p class="reveal-text">Hello there! Welcome to this session. Today, we are going to take a fascinating journey through the human body to understand exactly what happens during pregnancy. 🎓</p>
+
+        <p class="reveal-text">We are going to break down the anatomy and physiology of pregnancy step-by-step. Imagine we are watching a movie of life beginning. 🎬</p>
+
+        <h2 class="reveal-text">Let’s start with the very beginning: Fertilization 🌱</h2>
+
+        <p class="reveal-text">Fertilization is simply the meeting of the male gamete (the <strong>sperm</strong>) and the female gamete (the <strong>ovum</strong> or egg). When they join forces, they form what we call a <strong>zygote</strong>.</p>
+
+        <p class="reveal-text">📍 <strong>Where does this happen?</strong> This magic moment occurs at the <strong>ampulla</strong> of the fallopian tube.</p>
+
+        <p class="reveal-text">As soon as the zygote is formed, it starts moving towards the uterus. While it travels, it doesn't just sit there—cell division takes place! 🧬</p>
+
+        <p class="reveal-text">Here is the sequence of changes the zygote undergoes:</p>
+
+        <p class="reveal-text">1️⃣ First, it becomes a <strong>Morula</strong> (which looks like a mulberry, a solid ball of cells).</p>
+
+        <p class="reveal-text">2️⃣ Then, a fluid cavity called the <strong>blastocele</strong> appears inside it.</p>
+
+        <p class="reveal-text">3️⃣ This transforms it into a <strong>Blastocyst</strong>.</p>
+
+        <p class="reveal-text">Now, let's look closer at this <strong>Blastocyst</strong>. It has two main parts:</p>
+
+        <p class="reveal-text">🔹 <strong>The Trophoblast:</strong> This is the single outer layer of cells. (Spoiler alert: This layer will later develop into the <strong>placenta</strong> and <strong>chorion</strong>).</p>
+        
+        <p class="reveal-text">🔹 <strong>The Inner Cell Mass:</strong> These are the remaining cells clumped together at one end. This part will become the baby!</p>
+
+        <p class="reveal-text">The trophoblast gets sticky—like velcro—and adheres to the <strong>endometrium</strong> (the lining of the uterus). This process, called <strong>embedment</strong> or implantation, is usually complete by the <strong>11th day after ovulation</strong>. 🗓️</p>
+
+        <p class="reveal-text">Okay, let’s now move on to the environment where the baby will grow.</p>
+
+        <h2 class="reveal-text">The Endometrium (The Uterine Lining) 🏠</h2>
+
+        <p class="reveal-text">When a woman is pregnant, we stop calling the uterine lining the endometrium and start calling it the <strong>Decidua</strong>.</p>
+
+        <p class="reveal-text">Two major hormones are at work here:</p>
+        
+        <p class="reveal-text">🧪 <strong>Oestrogen:</strong> This causes the endometrium to grow <strong>four times</strong> its non-pregnant thickness!</p>
+        
+        <p class="reveal-text">🧪 <strong>Progesterone:</strong> Produced in large quantities by the <strong>Corpus Luteum</strong>. It stimulates the glands and increases blood supply. This makes the endometrium <strong>soft, vascular, and spongy</strong>—perfect for the fertilized ovum to nestle into. 🛏️</p>
+
+        <p class="reveal-text">The Decidua is divided into three parts based on location:</p>
+
+        <p class="reveal-text">1. <strong>Basal Decidua:</strong> The part underneath the blastocyst.</p>
+        <p class="reveal-text">2. <strong>Capsular Decidua:</strong> The part that covers the blastocyst like a blanket.</p>
+        <p class="reveal-text">3. <strong>Parietal Decidua:</strong> The remaining lining of the uterus.</p>
+
+        <p class="reveal-text">Now that we understand the "house," let’s look at the "builder" layers.</p>
+
+        <h2 class="reveal-text">Differentiation of Cells 🧩</h2>
+
+        <p class="reveal-text">Remember the <strong>Trophoblast</strong> (the outer layer)? Small projections appear all over it, and it differentiates into three distinct layers:</p>
+
+        <p class="reveal-text">🔸 <strong>Outer Syncytiotrophoblast:</strong> A layer of nucleated protoplasm. Its job is to erode the walls of blood vessels in the decidua to establish blood flow.</p>
+        
+        <p class="reveal-text">🔸 <strong>Inner Cytotrophoblast:</strong> A well-defined layer of cells. Crucially, this layer produces <strong>Human Chorionic Gonadotropin (hCG)</strong>.</p>
+        
+        <p class="reveal-text">🔸 <strong>Layer Mesoderm:</strong> Loose connective tissue.</p>
+
+        <p class="reveal-text">And what about the <strong>Inner Cell Mass</strong> (the future baby)? It differentiates into three germ layers, known as the <strong>Embryonic Plate</strong>:</p>
+
+        <p class="reveal-text">🧠 <strong>Ectoderm:</strong> Forms the skin and nervous system.</p>
+        <p class="reveal-text">🦴 <strong>Mesoderm:</strong> Forms bones, muscles, heart, and blood vessels.</p>
+        <p class="reveal-text">🫁 <strong>Endoderm:</strong> Forms mucous membranes and glands.</p>
+
+        <p class="reveal-text">Next, we have two important supporting structures:</p>
+
+        <p class="reveal-text">🌊 <strong>Amniotic Cavity:</strong> Filled with fluid, this gradually enlarges to enclose the embryo.</p>
+        <p class="reveal-text">🥚 <strong>Yolk Sac:</strong> Provides nourishment for the embryo until the trophoblast (placenta) is ready to take over.</p>
+
+        <p class="reveal-text">Let’s now dive into the massive changes happening to the mother's body.</p>
+
+        <h2 class="reveal-text">Physiological Changes in Different Systems 🔄</h2>
+
+        <h3 class="reveal-text">The Uterus (Myometrium)</h3>
+
+        <p class="reveal-text">The uterus grows by <strong>hyperplasia</strong> (increase in the number of cells) and hypertrophy (increase in size). Just look at these numbers! 📈</p>
+
+        <p class="reveal-text">⚖️ <strong>Weight:</strong> Increases from <strong>50-60 grams</strong> (pre-pregnancy) to <strong>1000 grams</strong> at term.</p>
+        <p class="reveal-text">📏 <strong>Size:</strong> Increases from <strong>7.5 × 5 × 2.5 cm</strong> to a massive <strong>30 × 22.5 × 20 cm</strong> at term.</p>
+
+        <p class="reveal-text">The walls initially thicken but then become thinner and less firm (from 1cm to 2.5cm by 4 months). The myometrium becomes elastic to accommodate the baby and contractile to push the baby out. 💪</p>
+
+        <p class="reveal-text">Uterine activity (contractions) occurs every 20-30 minutes. This actually helps blood flow! The upper uterine segment becomes thicker and shorter, pulling on the cervix to cause <strong>effacement</strong> (stretching and ripening).</p>
+
+        <p class="reveal-text"><strong>Blood Supply:</strong> Because the heart is pumping more, uterine blood flow jumps from <strong>50ml/min</strong> at 10 weeks to <strong>450-700ml/min</strong> at term! This rushing blood creates a sound called the <strong>uterine soufflé</strong>. 🌬️</p>
+
+        <p class="reveal-text"><strong>Timeline of Uterine Growth:</strong></p>
+        <p class="reveal-text">🗓️ <strong>12th Week:</strong> The uterus rotates to the right.</p>
+        <p class="reveal-text">🗓️ <strong>16th Week:</strong> The isthmus and cervix develop into the lower uterine segment (thinner, less muscle).</p>
+        <p class="reveal-text">🗓️ <strong>20th Week:</strong> The fundus (top of the uterus) reaches the level of the <strong>umbilicus</strong> (belly button). It is now cylindrical in shape.</p>
+        <p class="reveal-text">🗓️ <strong>30th Week:</strong> The fundus is midway between the umbilicus and the xiphisternum.</p>
+        <p class="reveal-text">🗓️ <strong>38th Week:</strong> It reaches the <strong>xiphisternum</strong> (bottom of the sternum).</p>
+
+        <p class="reveal-text">At this point, it is important to consider the changes in the cervix and vagina.</p>
+
+        <h3 class="reveal-text">The Cervix & Vagina</h3>
+
+        <p class="reveal-text">The cervix acts as a bodyguard. It remains firmly closed to prevent infection. Under the influence of <strong>oestradiol and progesterone</strong>, it becomes soft, swollen, and bluish (increased blood supply).</p>
+
+        <p class="reveal-text">It secretes a thick, viscous mucus that forms the <strong>operculum (cervical plug)</strong> to seal the uterus. 🛡️</p>
+
+        <p class="reveal-text"><strong>The Vagina:</strong></p>
+        <p class="reveal-text">Oestrogen causes the vaginal lining to thicken. The cells release glycogen. Bacteria called <strong>Doderlein’s bacilli</strong> eat this glycogen and produce <strong>lactic acid</strong>.</p>
+        <p class="reveal-text">⚠️ <strong>Result:</strong> An acidic white discharge. This protects against most bacteria, but unfortunately, <strong>Candida Albicans</strong> (yeast) loves this environment, often leading to thrush (vaginitis).</p>
+
+        <p class="reveal-text">Let’s now talk about the engine of the body—the heart.</p>
+
+        <h3 class="reveal-text">The Cardiovascular System ❤️</h3>
+
+        <p class="reveal-text">The heart actually enlarges by <strong>12%</strong>! Because the uterus pushes the diaphragm up, the heart is displaced upward and to the left.</p>
+
+        <p class="reveal-text">💓 <strong>Cardiac Output:</strong> Increases by 35-50% (from 5L/min to 7L/min by the 20th week).</p>
+        <p class="reveal-text">💓 <strong>Heart Rate:</strong> Increases by 10-20% (from 75 to 90 beats per minute).</p>
+
+        <p class="reveal-text"><strong>Blood Pressure Changes:</strong></p>
+        <p class="reveal-text">Even though cardiac output goes up, blood pressure usually goes <strong>down</strong> in early pregnancy because the blood vessels relax (decreased peripheral resistance). 👇</p>
+        <p class="reveal-text">Systolic drops by 5-10 mmHg. Diastolic drops by 10-15 mmHg (lowest at 24 weeks). It returns to normal levels by term.</p>
+
+        <p class="reveal-text">⚠️ <strong>Supine Hypotensive Syndrome:</strong></p>
+        <p class="reveal-text">If a pregnant woman lies flat on her back (supine) in late pregnancy, the heavy uterus compresses the <strong>inferior vena cava</strong>. This blocks blood returning to the heart. It can cause dizziness, nausea, and fainting. 😵‍💫</p>
+
+        <p class="reveal-text"><strong>Blood Flow Issues:</strong></p>
+        <p class="reveal-text">The poor return of blood from the legs leads to <strong>varicose veins</strong>, <strong>haemorrhoids</strong>, and swelling (oedema) in the legs and vulva.</p>
+
+        <h3 class="reveal-text">Blood Composition 🩸</h3>
+
+        <p class="reveal-text">Total blood volume increases by <strong>30-50%</strong> (about 1500ml extra!).</p>
+        <p class="reveal-text">While red blood cells increase to carry oxygen, the liquid part (plasma) increases more. Iron demand jumps to <strong>2 to 4mg daily</strong>.</p>
+        <p class="reveal-text">Clotting factors (VII, VIII, X) increase—this helps prevent bleeding at birth but increases risk of clots. White blood cells also rise, peaking at 30 weeks. Immunity factors (IgA, IgG, IgM) actually decrease.</p>
+
+        <p class="reveal-text">Next, we’ll look at how breathing changes.</p>
+
+        <h3 class="reveal-text">Respiratory System 🫁</h3>
+
+        <p class="reveal-text">Because of increased blood flow, the nose lining can get swollen, leading to nasal congestion or nosebleeds (epistaxis). Even the voice might change!</p>
+        <p class="reveal-text">The chest circumference expands by <strong>5-7cm</strong>. However, lung capacity drops by 5% because the diaphragm is pushed up.</p>
+        <p class="reveal-text">Tidal volume (air breathed in) increases by <strong>30-40%</strong>. The mother essentially hyperventilates slightly to get rid of CO2 for the baby.</p>
+
+        <p class="reveal-text">Let's now move to the Kidneys and Bladder.</p>
+
+        <h3 class="reveal-text">Urinary System 🚽</h3>
+
+        <p class="reveal-text">The kidneys work harder! Renal blood flow increases by <strong>70-80%</strong>.</p>
+        <p class="reveal-text">🔹 <strong>Filtration:</strong> Glomerular filtration increases. This means urea and creatinine levels in the blood actually fall (they are cleared out faster). However, glucose might leak into urine (glycosuria).</p>
+        
+        <p class="reveal-text">🔹 <strong>Structure:</strong> The ureters (tubes from kidney to bladder) relax and get squashed against the pelvic brim by the uterus. This causes urine to sit stagnant (stasis), increasing the risk of <strong>Urinary Tract Infections (UTIs)</strong>. 🦠</p>
+        
+        <p class="reveal-text">🔹 <strong>Frequency:</strong> In early pregnancy, the uterus presses on the bladder. In late pregnancy, the baby's head presses on it again. Result? Frequent urination!</p>
+
+        <h3 class="reveal-text">Gastrointestinal System 🍽️</h3>
+
+        <p class="reveal-text">The mouth and gums may become soft, spongy, and bleed easily. Salivation increases.</p>
+        <p class="reveal-text">🤢 <strong>Morning Sickness:</strong> Nausea and vomiting occur from 4-14 weeks due to relaxed stomach muscles and slow movement (hypomotility).</p>
+        <p class="reveal-text">😋 <strong>Cravings:</strong> Taste changes! Some women crave bizarre things like coal (Pica).</p>
+        <p class="reveal-text">🔥 <strong>Heartburn:</strong> Very common due to reflux (stomach acid coming up).</p>
+        <p class="reveal-text">🧱 <strong>Constipation:</strong> Caused by the uterus blocking the bowel and progesterone relaxing the muscles.</p>
+
+        <p class="reveal-text">At this point, it’s important to look at metabolism and weight.</p>
+
+        <h3 class="reveal-text">Metabolic & Weight Changes ⚖️</h3>
+
+        <p class="reveal-text"><strong>Metabolism:</strong></p>
+        <p class="reveal-text">In the first half of pregnancy, the body stores fat. In the second half, insulin resistance increases to ensure the baby gets enough glucose. This is why fasting glucose levels fluctuate.</p>
+
+        <p class="reveal-text"><strong>Weight Gain (Primigravida - First Pregnancy):</strong></p>
+        <p class="reveal-text">Expected total gain is roughly <strong>12.5kg</strong>.</p>
+        <p class="reveal-text">🔸 First 20 weeks: 4.0 kg</p>
+        <p class="reveal-text">🔸 Second 20 weeks: 8.5 kg (about 0.4kg per week).</p>
+
+        <h3 class="reveal-text">Skeletal & Skin Changes 🦴</h3>
+
+        <p class="reveal-text"><strong>Skeleton:</strong> Hormones (Relaxin and Oestrogen) loosen the pelvic ligaments. The symphysis pubis widens by 4mm. This allows the pelvis to open for birth but causes the "waddling gait" and back pain.</p>
+        <p class="reveal-text">🦷 Teeth are prone to decay due to calcium demands.</p>
+
+        <p class="reveal-text"><strong>Skin:</strong></p>
+        <p class="reveal-text">Pigmentation increases due to Melanocyte Stimulating Hormone.</p>
+        <p class="reveal-text">🎭 <strong>Chloasma (Mask of Pregnancy):</strong> Brownish patches on the face.</p>
+        <p class="reveal-text">Other dark areas: Areolae, perineum, axillae, and the line down the tummy (Linea Nigra).</p>
+
+        <h3 class="reveal-text">Breasts & Endocrine System 🥛</h3>
+
+        <p class="reveal-text">Breasts increase in size and sensitivity. Veins become visible (blue streaks). The nipples become erectile, and <strong>Montgomery’s follicles</strong> (little bumps on the areola) appear.</p>
+
+        <p class="reveal-text"><strong>Hormones:</strong></p>
+        <p class="reveal-text">🔹 <strong>Human Placental Lactogen:</strong> Stimulates breast growth and affects metabolism.</p>
+        <p class="reveal-text">🔹 <strong>Oxytocin:</strong> Released from the posterior pituitary gland (crucial for labor and milk).</p>
+        <p class="reveal-text">🔹 <strong>FSH & LH:</strong> These are inhibited (stopped) so the woman doesn't ovulate again while pregnant.</p>
+
+        <p class="reveal-text">Finally, let’s wrap up with how we actually confirm the pregnancy.</p>
+
+        <h2 class="reveal-text">Diagnosis and Signs of Pregnancy 🕵️‍♀️</h2>
+
+        <p class="reveal-text">We group these signs into three categories: Presumptive (Maybe), Probable (Likely), and Positive (Definitely).</p>
+
+        <h3 class="reveal-text">1. Presumptive Signs (Subjective - What the mother feels)</h3>
+        <p class="reveal-text">❓ Amenorrhea (No period) at 4 weeks.</p>
+        <p class="reveal-text">❓ Morning sickness (4-14 weeks).</p>
+        <p class="reveal-text">❓ Breast tenderness and changes.</p>
+        <p class="reveal-text">❓ Fatigue and frequent urination.</p>
+        <p class="reveal-text">❓ <strong>Quickening:</strong> The first flutter of movement felt by the mother (18-20 weeks).</p>
+
+        <h3 class="reveal-text">2. Probable Signs (Objective - What the doctor sees)</h3>
+        <p class="reveal-text">🔍 Enlargement of the uterus.</p>
+        <p class="reveal-text">🔍 Positive pregnancy test (hCG in blood or urine).</p>
+        <p class="reveal-text">🔍 <strong>Jacquemier’s / Chadwick’s Sign:</strong> Violet-blue colour of the vulva (6 weeks).</p>
+        <p class="reveal-text">🔍 <strong>Osiander’s Sign:</strong> Pulsation felt in the lateral fornices (8 weeks).</p>
+        <p class="reveal-text">🔍 <strong>Goodell’s Sign:</strong> Softening of the cervix (feels like lips instead of a nose).</p>
+        <p class="reveal-text">🔍 Braxton Hicks contractions.</p>
+        <p class="reveal-text">🔍 Ballotement (bouncing the fetus inside).</p>
+
+        <h3 class="reveal-text">3. Positive Signs (Definite Proof of Fetus) ✅</h3>
+        <p class="reveal-text">✅ Ultrasound visualization (6 weeks+).</p>
+        <p class="reveal-text">✅ Fetal heart sounds heard by ultrasound or fetoscope.</p>
+        <p class="reveal-text">✅ Palpable fetal movements felt by the examiner (22 weeks).</p>
+        <p class="reveal-text">✅ Visible fetal movements.</p>
+        <p class="reveal-text">✅ Palpation of fetal parts.</p>
+
+        <p class="reveal-text">And that, my dear student, covers the incredible physiological journey of pregnancy! You now understand how the body adapts to create new life.</p>
+
+        <!-- Continuous VIP Section -->
+        <div class="vip-container reveal-text">
+            <p style="font-size: 28px; margin-bottom: 10px;">🚀</p>
+            <p>Join our VIP if you're yet to, for more study materials and other bonuses (worth #115,000).</p>
+            <p>For more details click below</p>
+            <p>👇</p>
+            
+            <a href="https://tinyurl.com/2dbtvx2b" class="vip-btn" target="_blank">click Here</a>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Scroll Progress Bar Logic ---
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // --- Intersection Observer for "Pop" Animation ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.reveal-text');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+          </html>
